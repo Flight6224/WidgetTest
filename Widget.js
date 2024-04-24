@@ -13072,7 +13072,7 @@ found at http://polymer.github.io/PATENTS.txt
             }
             ))
         };
-        const pt = dt.Desktop.logger.createLogger("gurue-sendchannel-component");
+        const pt = dt.Desktop.logger.createLogger("test-widget-component");
         let vt = class extends oe {
             constructor() {
                 super(),
@@ -13182,66 +13182,50 @@ found at http://polymer.github.io/PATENTS.txt
             }
             render() {
                 return U`
-      <div>
-        <div
-          class="container"
-          style="padding: 12px; display: flex; flex-direction: row; width: 90%;"
-        >
-        <div style="flex: 1; padding: 10px">
-            <md-label style="padding: 10px">
-            Team Name:
-            </md-label>
-            <md-combobox style="padding: 10px"
-                shape="pill"
-                class="channel-combobox"
-                .searchable="false"
-                .options=${["Call Center", "Support Center","PL Service Center","Test SMS"]} placeholder="Select a Team to Send This Text Message From"
-                .value=${[this.selectedChannel]}
-                @remove-all-selected=${()=>this.handleClear()}
-                @change-selected="${e=>this.handleChannelSelection(e)}"
-            >
-            </md-combobox>
-          <md-input style="padding: 10px"
-                  label="Send To:",
-                  shape="pill"
-                  containerSize="small-12"
-                  placeholder="Enter the 10 Digit Number to Send This Message To"
-                  id="sendChannelValue" 
-                  .value=${[this.sendChannelValue]}
-                  @input-change=${this.inputHandler}
-
-          >
-          </md-input>
-          <md-input style="padding: 10px"
-                    label="Message"
-                    rows="10"
-                    shape="pill"
-                    containerSize="small-12"
-                    placeholder="Enter your text message"
-                    multiline
-                    id="sendMessageValue"
-                    .value=${[this.sendMessageValue]}
-                    @input-change=${this.inputHandler}
-            >
-          </md-input>
-          <md-button
-                  .disabled="false"
-                  color="blue"
-                  @click=${this.sendSMSHandler};
-                  }}
-          >Send Message</md-button><br>
-              <md-label style="padding: 10px">
-                  Send Response
-              </md-label>
-              <div>
-                  Transaction ID:
-                  <b>${this.sendTransID}</b>
-              </div>
-              <div>
-                  Status:
-                  <b>${this.sendStatus}</b><br>
-              </div>
-      </div>
+      <div style="display: flex; flex-wrap: wrap;">
+    <div style="width: 50%; flex: 0 0 50%; max-width: 50%;">
+        <div style="padding: 10px; border: 1px solid #ccc; margin-bottom: 10px;">
+            <div style="margin-bottom: 5px;">Field 1</div>
+            <md-input style="width: calc(100% - 20px); margin-bottom: 10px;"></md-input>
+            <md-button color="blue" style="width: calc(100% - 20px);">Submit</md-button>
+        </div>
+    </div>
+    <div style="width: 50%; flex: 0 0 50%; max-width: 50%;">
+        <div style="padding: 10px; border: 1px solid #ccc; margin-bottom: 10px;">
+            <div style="margin-bottom: 5px;">Field 2</div>
+            <md-combobox style="width: calc(100% - 20px); margin-bottom: 10px;"></md-combobox>
+            <md-button color="blue" style="width: calc(100% - 20px);">Submit</md-button>
+        </div>
+    </div>
+    <div style="width: 50%; flex: 0 0 50%; max-width: 50%;">
+        <div style="padding: 10px; border: 1px solid #ccc; margin-bottom: 10px;">
+            <div style="margin-bottom: 5px;">Field 1</div>
+            <md-input style="width: calc(100% - 20px); margin-bottom: 10px;"></md-input>
+            <md-button color="blue" style="width: calc(100% - 20px);">Submit</md-button>
+        </div>
+    </div>
+    <div style="width: 50%; flex: 0 0 50%; max-width: 50%;">
+        <div style="padding: 10px; border: 1px solid #ccc; margin-bottom: 10px;">
+            <div style="margin-bottom: 5px;">Field 2</div>
+            <md-combobox style="width: calc(100% - 20px); margin-bottom: 10px;"></md-combobox>
+            <md-button color="blue" style="width: calc(100% - 20px);">Submit</md-button>
+        </div>
+    </div>
+    <div style="width: 50%; flex: 0 0 50%; max-width: 50%;">
+        <div style="padding: 10px; border: 1px solid #ccc; margin-bottom: 10px;">
+            <div style="margin-bottom: 5px;">Field 1</div>
+            <md-input style="width: calc(100% - 20px); margin-bottom: 10px;"></md-input>
+            <md-button color="blue" style="width: calc(100% - 20px);">Submit</md-button>
+        </div>
+    </div>
+    <div style="width: 50%; flex: 0 0 50%; max-width: 50%;">
+        <div style="padding: 10px; border: 1px solid #ccc; margin-bottom: 10px;">
+            <div style="margin-bottom: 5px;">Field 2</div>
+            <md-combobox style="width: calc(100% - 20px); margin-bottom: 10px;"></md-combobox>
+            <md-button color="blue" style="width: calc(100% - 20px);">Submit</md-button>
+        </div>
+    </div>
+</div>
 
     `
             }
@@ -13266,7 +13250,7 @@ found at http://polymer.github.io/PATENTS.txt
         ht([Q()], vt.prototype, "sendTransID", void 0),
         ht([Q()], vt.prototype, "sendStatus", void 0),
         ht([Q()], vt.prototype, "dn", void 0),
-        vt = ht([K("gurue-sendchannel-component")], vt);
+        vt = ht([K("test-widget-component")], vt);
         var gt = function(e, t, n, i) {
             var r, s = arguments.length, o = s < 3 ? t : null === i ? i = Object.getOwnPropertyDescriptor(t, n) : i;
             if ("object" == typeof Reflect && "function" == typeof Reflect.decorate)
@@ -13295,7 +13279,7 @@ found at http://polymer.github.io/PATENTS.txt
             }
             render() {
                 return U`
-      <gurue-sendchannel-component style="height: 100%"></gurue-sendchannel-component>
+      <test-widget-component style="height: 100%"></test-widget-component>
     `
             }
         }
@@ -13308,7 +13292,7 @@ found at http://polymer.github.io/PATENTS.txt
             reflect: !0,
             attribute: "api-key"
         })], mt.prototype, "apiKey", void 0),
-        mt = gt([K("gurue-sendchannel-widget")], mt);
+        mt = gt([K("test-widget-widget")], mt);
         t.default = mt
     }
     ])
