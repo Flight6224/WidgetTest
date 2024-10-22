@@ -1,4 +1,8 @@
 {
+    "Notes": {
+        "ColorOptions": "blue, cobalt, cyan, darkmint, gold, green, grey, mint, orange, pink, red, violet, yellow",
+        "IconLink": "https://github.com/momentum-design/momentum-ui/tree/40ff564f61938e296e36df0de06c8f30e9c6c722/icons/svg"
+    },
     "Chat": {
         "name": "icon-chat-active_16",
         "color": "cobalt"
