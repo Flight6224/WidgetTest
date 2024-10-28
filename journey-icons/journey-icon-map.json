@@ -110,5 +110,17 @@
     "multi events single day": {
         "name": "icon-calendar-day_12",
         "color": "yellow"
+    },
+    "Jira Support Center": {
+        "name": "tools_16",
+        "color": "red"
+    },
+    "Jira Download Management": {
+        "name": "cloud-upload_16",
+        "color": "cobalt"
+    },
+    "Jira Salesforce Contact": {
+        "name": "user_16",
+        "color": "cobalt"
     }
 }
