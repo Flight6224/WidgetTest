@@ -122,5 +122,34 @@
     "Jira Salesforce Contact": {
         "name": "user_16",
         "color": "mint"
+    },
+    "Rapid Response Success": {
+        "name": "file-spreadsheet_16",
+        "color": "success"
+    },
+    "Rapid Response Decline": {
+        "name": "file-spreadsheet_16",
+        "color": "red"
+    },
+    "Rapid Response Decline Test": {
+        "name": "file-spreadsheet_16",
+        "color": "warning"
+    },
+    "Rapid Response Decline Testtwo": {
+        "name": "file-spreadsheet_16",
+        "color": "#fc8b98"
+    },
+    "Rapid Response Decline Testthree": {
+        "name": "file-spreadsheet_16",
+        "color": "fc8b98"
+    },
+    "Rapid Response Decline Testthree": {
+        "name": "file-spreadsheet_16",
+        "color": "red-70"
+    },
+    "Rapid Response Error": {
+        "name": "file-spreadsheet_16",
+        "color": "orange"
     }
+    
 }
