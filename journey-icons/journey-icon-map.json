@@ -125,25 +125,17 @@
     },
     "Rapid Response Success": {
         "name": "file-spreadsheet_16",
-        "color": "success"
+        "color": "darkmint"
     },
     "Rapid Response Decline": {
         "name": "file-spreadsheet_16",
         "color": "red"
     },
-    "Rapid Response Decline Test": {
-        "name": "file-spreadsheet_16",
-        "color": "warning"
-    },
-    "Rapid Response Decline Testtwo": {
-        "name": "file-spreadsheet_16",
-        "color": "#fc8b98"
-    },
     "Rapid Response Decline Testthree": {
         "name": "file-spreadsheet_16",
         "color": "fc8b98"
     },
-    "Rapid Response Decline Testthree": {
+    "Rapid Response Decline Testfour": {
         "name": "file-spreadsheet_16",
         "color": "red-70"
     },
