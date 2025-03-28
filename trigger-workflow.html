@@ -1,0 +1,185 @@
+<imi-event-modal lang="en-US" placement="bottom" class="predefined-template-modal">
+  <template shadowrootmode="open">
+    <style>
+      ul,
+      li {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* :host styles will be applied to imi-engage itself */
+      :host,
+      .target {
+        /*position: absolute;*/
+        /*    left: 0;*/
+        /*    right: 0;*/
+        /*    top: 0;*/
+        /*    bottom: 0;*/
+      }
+
+      .splashscreen {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .d-none {
+        display: none !important;
+      }
+
+      #imi-chat-container {
+        height: 100%
+      }
+
+      md-menu-overlay::part(overlay-content) {
+        /*max-width: 450px;*/
+        overflow: visible;
+      }
+
+      #template-tabs::part(tabs-more-list) {
+        max-height: 500px !important;
+        height: auto !important;
+      }
+
+      #tabs-more-list {
+        height: auto !important;
+      }
+
+      .template-modal-container {
+        display: inline-block;
+      }
+    </style>
+    <!--todo: these file are repeated since they are already loaded-->
+    <link rel="stylesheet" href="https://wc.imiengage.io/v1.9.4/global.css">
+    <link rel="stylesheet" href="https://wc.imiengage.io/v1.9.4/build/svelte-webcomponents.css">
+    <!--  .template-modal-container: all functionalities of the engage template modal will be appended here-->
+    <div class="template-modal-container" role="listitem">
+      <md-menu-overlay class="template-comp svelte-rz450a" custom-width="400px" focus-trap-index="-1">
+        <template shadowrootmode="open">
+          <!---->
+          <style>
+            :host .md-menu-overlay .overlay-content {
+              max-height: calc(100vh - 48px);
+              ;
+              width: 400px;
+              ;
+              overflow-y: auto;
+              ;
+            }
+          </style>
+          <div class="md-menu-overlay">
+            <slot name="menu-trigger" aria-expanded="false"></slot>
+            <div part="overlay" class="overlay-container" role="menu">
+              <div id="arrow" class="overlay-arrow" data-popper-arrow=""></div>
+              <div class="overlay-content" part="overlay-content">
+                <slot></slot>
+              </div>
+            </div>
+          </div>
+          <!---->
+        </template>
+        <md-tooltip slot="menu-trigger" placement="top" aria-haspopup="true">
+          <template shadowrootmode="open">
+            <!---->
+            <div class="md-tooltip  ">
+              <div class="md-tooltip__popper" role="tooltip" part="tooltip-popper">
+                <div id="md-tooltip__content" class="md-tooltip__content" part="tooltip-content"> No workflows configured </div>
+                <div id="arrow" class="md-tooltip__arrow" data-popper-arrow=""></div>
+              </div>
+              <div class="md-tooltip__reference" part="tooltip_reference" aria-describedby="md-tooltip__content">
+                <slot></slot>
+              </div>
+            </div>
+            <!---->
+          </template>
+          <md-button class="template-comp-trigger md-button svelte-rz450a" hasremovestyle="" arialabel="Trigger Workflow">
+            <template shadowrootmode="open">
+              <!---->
+              <button part="button" id="eventBtnId" class="md-button md-button" aria-label="Trigger Workflow" type="button" lang="en">
+                <span part="button-children" class="md-button__children">
+                  <slot name="icon"></slot>
+                  <slot name="text"></slot>
+                  <slot></slot>
+                </span>
+              </button>
+              <!---->
+            </template>
+            <md-badge bgcolor="var(--md-quaternary-bg-color, --md-quaternary-bg-color-default)">
+              <template shadowrootmode="open">
+                <!---->
+                <style>
+                  :host .md-badge {
+                    background-color: var(--md-quaternary-bg-color, --md-quaternary-bg-color-default);
+                    ;
+                    ;
+                    height: 32px;
+                    width: 32px;
+                    ;
+                    ;
+                  }
+                </style>
+                <span part="badge" tabindex="" class="md-badge md-badge--circle" aria-label="">
+                  <slot></slot>
+                </span>
+                <!---->
+              </template>
+              <md-icon class=" ">
+                <template shadowrootmode="open">
+                  <!---->
+                  <i part="icon" role="img" id="" class="md-icon icon icon-event_16" aria-label="icon" title="" style="font-size: 16px;"></i>
+                  <!---->
+                </template>
+              </md-icon>
+            </md-badge>
+          </md-button>
+        </md-tooltip>
+        <div class="svelte-rz450a" aria-live="assertive" aria-atomic="true">
+          <p>0 search results available</p>
+        </div>
+        <div class="template-comp-modal-content svelte-rz450a" lang="en">
+          <h2 class="event_hdr paddingLB svelte-rz450a">Workflows</h2>
+          <div class="template-comp-modal-content-input svelte-rz450a">
+            <md-input htmlid="inputSearchClearPill" containersize="small-12" arialabel="Search" name="" value="">
+              <template shadowrootmode="open">
+                <!---->
+                <div part="md-input-container" class="md-input-container colums small-12">
+                  <div class="md-input__wrapper  ">
+                    <div class="md-input__before">
+                      <md-icon name="search-bold" size="16" iconset="momentumDesign">
+                        <template shadowrootmode="open">
+                          <!---->
+                          <div class="svg-icon-container" role="img" id="" aria-label="icon" title="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 32 32" class="icon search-bold" part="icon" fill="currentColor">
+                              <path d="M13 2C6.925 2 2 6.925 2 13s4.925 11 11 11c2.678 0 5.132-.957 7.04-2.547l8.253 8.254a1 1 0 0 0 1.414-1.414l-8.254-8.254A10.96 10.96 0 0 0 24 13c0-6.075-4.925-11-11-11M4 13a9 9 0 1 1 18 0 9 9 0 0 1-18 0"></path>
+                            </svg>
+                          </div>
+                          <!---->
+                        </template>
+                      </md-icon>
+                    </div>
+                    <input part="input" tabindex="0" class="md-input md-input--pill md-input--before" type="text" aria-describedby="" aria-controls="" aria-expanded="undefined" aria-label="Search" aria-invalid="null" aria-errormessage="inputSearchClearPill-message" id="inputSearchClearPill" role="" placeholder="Search">
+                    <div class="md-input__after">
+                      <slot name="input-section-right"></slot>
+                    </div>
+                  </div>
+                </div>
+                <!---->
+              </template>
+            </md-input>
+          </div>
+          <div>
+            <div class="no-template svelte-rz450a">
+              <img src="https://wc.imiengage.io/v1.9.4/img/no_template.svg" alt="">
+              <div style="font-weight: bold; font-size: 14px; margin-top: 8px;">No Results</div>
+            </div>
+          </div>
+        </div>
+      </md-menu-overlay>
+    </div>
+  </template>
+</imi-event-modal>
